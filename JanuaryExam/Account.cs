@@ -28,7 +28,7 @@ namespace JanuaryExam
     }
     public class CurrentAccount : Account
     {
-        public double IntrestRate { get; set; } = 0.3;
+        public double IntrestRate { get; set; }
 
 
         public override double CalculateIntrest()
@@ -40,7 +40,7 @@ namespace JanuaryExam
 
     public class SavingsAccount : Account 
     {
-        public double IntrestRate { get; set; } = 0.6;
+        public double IntrestRate { get; set; }
 
         public override double CalculateIntrest()
         {
