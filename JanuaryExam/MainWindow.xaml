@@ -8,6 +8,18 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <ListBox x:Name="lbxNames" HorizontalAlignment="Left" Height="293" Margin="36,77,0,0" VerticalAlignment="Top" Width="220"/>
+        <CheckBox x:Name="currentAccounts" Content="Current Accounts" HorizontalAlignment="Left" Margin="57,50,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="savingsAccounts" Content="Savings Accounts" HorizontalAlignment="Left" Margin="187,50,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" Margin="328,77,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Last_Name" Content="Last Name" HorizontalAlignment="Left" Margin="329,108,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Balance" Content="Balance" HorizontalAlignment="Left" Margin="329,139,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="AccountType" Content="Account Type" HorizontalAlignment="Left" Margin="329,190,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Balance1" Content="Balance" HorizontalAlignment="Left" Margin="329,234,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="IntrestDate" Content="Intrest Date" HorizontalAlignment="Left" Margin="329,282,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Transaction" Content="Transaction Amount" HorizontalAlignment="Left" Margin="328,328,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnDeposit" Content="Deposit" HorizontalAlignment="Left" Margin="662,103,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnWithdraw" Content="Withdraw" HorizontalAlignment="Left" Margin="662,150,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnIntrest" Content="Intrest" HorizontalAlignment="Left" Margin="662,201,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
