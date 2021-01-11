@@ -32,10 +32,10 @@ namespace JanuaryExam
             currentaccount = new List<Account>();
             savingsaccount = new List<Account>();
 
-            CurrentAccount ca1 = new CurrentAccount() { LastName = "Saul", FirstName = "Adam" };
-            CurrentAccount ca2 = new CurrentAccount() { LastName = "Kirby", FirstName = "Chantelle" };
-            SavingsAccount sa1 = new SavingsAccount() { LastName = "Dunne", FirstName = "John" };
-            SavingsAccount sa2 = new SavingsAccount() { LastName = "Dunne", FirstName = "Cathy" };
+            CurrentAccount ca1 = new CurrentAccount() { AccountNumber = 001, LastName = "Saul", FirstName = "Adam" };
+            CurrentAccount ca2 = new CurrentAccount() { AccountNumber = 002, LastName = "Kirby", FirstName = "Chantelle" };
+            SavingsAccount sa1 = new SavingsAccount() { AccountNumber = 003, LastName = "Dunne", FirstName = "John" };
+            SavingsAccount sa2 = new SavingsAccount() { AccountNumber = 004, LastName = "Dunne", FirstName = "Cathy" };
 
         }
     }

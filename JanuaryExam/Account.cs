@@ -16,33 +16,35 @@ namespace JanuaryExam
 
         public DateTime IntrestDate { get; set; }
 
+        public int AccountNumber { get; set; }
+
 
         public abstract double CalculateIntrest(); //Abstract method
 
         public override string ToString() //used to display information in listbox
         {
-            return $" {LastName},{FirstName}";
+            return $" {AccountNumber},{LastName},{FirstName}";
         }
     }
     public class CurrentAccount : Account
     {
-        public double IntrestRate { get; set; }
+        public double IntrestRate { get; set; } = 0.3;
 
 
         public override double CalculateIntrest()
         {
-            Acc
-            IntrestRate;
+            
+            return Balance*IntrestRate;
         }
     }
 
     public class SavingsAccount : Account 
     {
-        public double IntrestRate { get; set; }
+        public double IntrestRate { get; set; } = 0.6;
 
         public override double CalculateIntrest()
         {
-            return IntrestRate;
+            return Balance * IntrestRate;
         }
     }
 }
