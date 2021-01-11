@@ -20,8 +20,8 @@ namespace JanuaryExam
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Account> currentaccount;
-        public List<Account> savingsaccount;
+        public List<Account> accounts;
+        public List<Account> filteredaccounts;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,14 +29,20 @@ namespace JanuaryExam
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            currentaccount = new List<Account>();
-            savingsaccount = new List<Account>();
+            accounts = new List<Account>();
+            filteredaccounts = new List<Account>();
 
             CurrentAccount ca1 = new CurrentAccount() { AccountNumber = 001, LastName = "Saul", FirstName = "Adam" };
             CurrentAccount ca2 = new CurrentAccount() { AccountNumber = 002, LastName = "Kirby", FirstName = "Chantelle" };
             SavingsAccount sa1 = new SavingsAccount() { AccountNumber = 003, LastName = "Dunne", FirstName = "John" };
             SavingsAccount sa2 = new SavingsAccount() { AccountNumber = 004, LastName = "Dunne", FirstName = "Cathy" };
 
+            accounts.Add(ca1);
+            accounts.Add(ca2);
+            accounts.Add(sa1);
+            accounts.Add(sa2);
+
+            lbxNames.ItemsSource = accounts;
         }
 
         private void lbxNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
