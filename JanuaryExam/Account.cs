@@ -28,9 +28,11 @@ namespace JanuaryExam
     {
         public double IntrestRate { get; set; }
 
+
         public override double CalculateIntrest()
         {
-            return IntrestRate;
+            Acc
+            IntrestRate;
         }
     }
 
