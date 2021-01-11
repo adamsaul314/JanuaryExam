@@ -18,5 +18,29 @@ namespace JanuaryExam
 
 
         public abstract double CalculateIntrest(); //Abstract method
+
+        public override string ToString() //used to display information in listbox
+        {
+            return $" {LastName},{FirstName}";
+        }
+    }
+    public class CurrentAccount : Account
+    {
+        public double IntrestRate { get; set; }
+
+        public override double CalculateIntrest()
+        {
+            return IntrestRate;
+        }
+    }
+
+    public class SavingsAccount : Account 
+    {
+        public double IntrestRate { get; set; }
+
+        public override double CalculateIntrest()
+        {
+            return IntrestRate;
+        }
     }
 }
