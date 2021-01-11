@@ -38,5 +38,18 @@ namespace JanuaryExam
             SavingsAccount sa2 = new SavingsAccount() { AccountNumber = 004, LastName = "Dunne", FirstName = "Cathy" };
 
         }
+
+        private void lbxNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Account selected = lbxNames.SelectedItem as Account;
+
+            if(selected != null)
+            {
+                tblkFirstName.Text = selected.FirstName;
+                tblkLastname.Text = selected.LastName;
+
+                tblkBalance.Text = selected.CalculateIntrest().ToString("C");
+            }
+        }
     }
 }
