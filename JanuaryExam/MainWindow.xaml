@@ -8,8 +8,8 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <ListBox x:Name="lbxNames" HorizontalAlignment="Left" Height="293" Margin="36,77,0,0" VerticalAlignment="Top" Width="220" SelectionChanged="lbxNames_SelectionChanged"/>
-        <CheckBox x:Name="currentAccounts" Content="Current Accounts" HorizontalAlignment="Left" Margin="57,50,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="savingsAccounts" Content="Savings Accounts" HorizontalAlignment="Left" Margin="187,50,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chbxCurrentAccount" Content="Current Accounts" HorizontalAlignment="Left" Margin="57,50,0,0" VerticalAlignment="Top" Click="chbx_Click"/>
+        <CheckBox x:Name="chbxSavingsAccount" Content="Savings Accounts" HorizontalAlignment="Left" Margin="187,50,0,0" VerticalAlignment="Top" Click="chbx_Click"/>
         <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" Margin="328,77,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Last_Name" Content="Last Name" HorizontalAlignment="Left" Margin="329,108,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Balance" Content="Balance" HorizontalAlignment="Left" Margin="329,139,0,0" VerticalAlignment="Top"/>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace JanuaryExam
 {
@@ -43,6 +44,11 @@ namespace JanuaryExam
             accounts.Add(sa2);
 
             lbxNames.ItemsSource = accounts;
+
+           
+
+            chbxCurrentAccount.IsChecked = true;
+            chbxSavingsAccount.IsChecked = true;
         }
 
         private void lbxNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,6 +62,49 @@ namespace JanuaryExam
 
                 tblkBalance.Text = selected.CalculateIntrest().ToString("C");
             }
+        }
+
+
+        private void chbx_Click(object sender, RoutedEventArgs e)
+        {
+            //if all employees are selected
+            if((chbxCurrentAccount.IsChecked==true) && (chbxSavingsAccount.IsChecked == true))
+            {
+                lbxNames.ItemsSource = accounts;
+            }
+            //if no emplyees are selected
+            else if ((chbxCurrentAccount.IsChecked == false) && (chbxSavingsAccount.IsChecked == false))
+            {
+                lbxNames.ItemsSource = null;
+            }
+            //if Current account is selected
+            else if ((chbxCurrentAccount.IsChecked == true) && (chbxSavingsAccount.IsChecked == false))
+            {
+                filteredaccounts.Clear();
+
+                foreach(Account account in accounts)
+                {
+                    if(account is CurrentAccount)
+                    {
+                        filteredaccounts.Add(account);
+                    }
+                    lbxNames.ItemsSource = filteredaccounts;
+                }
+            }
+            else if ((chbxCurrentAccount.IsChecked == false) && (chbxSavingsAccount.IsChecked == true))
+            {
+                filteredaccounts.Clear();
+
+                foreach (Account account in accounts)
+                {
+                    if (account is SavingsAccount)
+                    {
+                        filteredaccounts.Add(account);
+                    }
+                    lbxNames.ItemsSource = filteredaccounts;
+                }
+            }
+
         }
     }
 }
